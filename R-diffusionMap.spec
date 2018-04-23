@@ -4,7 +4,7 @@
 #
 Name     : R-diffusionMap
 Version  : 1.1.0
-Release  : 5
+Release  : 6
 URL      : https://cran.r-project.org/src/contrib/diffusionMap_1.1-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/diffusionMap_1.1-0.tar.gz
 Summary  : Diffusion map
