@@ -4,14 +4,12 @@
 #
 Name     : R-diffusionMap
 Version  : 1.1.0.1
-Release  : 12
+Release  : 13
 URL      : https://cran.r-project.org/src/contrib/diffusionMap_1.1-0.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/diffusionMap_1.1-0.1.tar.gz
 Summary  : Diffusion Map
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-igraph
-Requires: R-scatterplot3d
 BuildRequires : R-igraph
 BuildRequires : R-scatterplot3d
 BuildRequires : clr-R-helpers
@@ -29,11 +27,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532291636
+export SOURCE_DATE_EPOCH=1532293850
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1532291636
+export SOURCE_DATE_EPOCH=1532293850
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
