@@ -4,20 +4,20 @@
 #
 Name     : R-diffusionMap
 Version  : 1.1.0.1
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/diffusionMap_1.1-0.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/diffusionMap_1.1-0.1.tar.gz
 Summary  : Diffusion Map
 Group    : Development/Tools
 License  : GPL-2.0
+Requires: R-pkgconfig
 BuildRequires : R-igraph
+BuildRequires : R-pkgconfig
 BuildRequires : R-scatterplot3d
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
-parametrization, including creation and visualization of
-          diffusion map, clustering with diffusion K-means and
-	  regression using adaptive regression model.
+No detailed description available
 
 %prep
 %setup -q -c -n diffusionMap
@@ -27,11 +27,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532293850
+export SOURCE_DATE_EPOCH=1552805713
 
 %install
+export SOURCE_DATE_EPOCH=1552805713
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1532293850
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -66,8 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library diffusionMap|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  diffusionMap || :
 
 
 %files
